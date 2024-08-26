@@ -7,10 +7,48 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1> Primer entregable JS</h1>
 
-    <p> Con el proyecto buscamos cotizar un trabajo de programacion, en donde el precio por hora es de U$S 250. La persona tiene un presupuesto de alrededor de U$S 3000, por lo que si esta por debajo, le gustaria avanzar. Pero si cobra 4000, lo puede llegar a evaluar dependiendo del servicio. </p>
+    <div class="container"> 
 
+            <div class="introduccion">
+               <h1> Buscas contratar un servicio de programacion? </h1>
+               <h2> En Developer World tenemos una solucion para vos, responde las preguntas y obtené un presupuesto. </h2>
+                <div class="data">  <!--lo creo para imprimir el resultado de mi calculadora-->
+                    <div class="result" id="result"> </div>
+                </div> 
+            </div>
+            
+            <div class="formulario">
+                <form action="form.php" method="POST"></form>
+
+                    <p> Qué trabajo de Developer World deseas contratar? </p>
+                    <select name="tipoTrabajo" id="tipoTrabajo">
+                        <option value="Desarrollo front-end"> Desarrollo front-end </option>
+                        <option value="Desarrollo back-end"> Desarrollo back-end </option>
+                        <option value="Desarrollo aplicaciones moviles"> Desarrollo aplicaciones moviles </option>
+                    </select>
+            
+                    <p> Cuantos desarrolladores desearias contratar? </p>
+                    <input type="number" name="desarrolladores" id="desarrolladores">
+            
+                    <p> Cuantas horas de trabajo deseas cotizar? </p>
+                    <input type="number" name="horas" id="horas">
+            
+                    <p> Deseas contratar servicio de mantenimiento por U$S100? </p>
+                    <select name="servicioAdicional" id="servicioAdicional">
+                        <option value="Si"> Si </option>
+                        <option value="No"> No </option>
+                    </select>
+            
+                    <input type="button" id="botonEnviar" value="Cotiza Online!"> 
+                </form>    
+
+            </div>
+        </div> 
+    
+    </div>
+     
+    
     <script src="js/main.js"></script>
 
 </body>

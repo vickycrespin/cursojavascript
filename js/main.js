@@ -1,49 +1,51 @@
-
-let horasTrabajadas = parseInt (prompt ("Cuantas horas de programacion queres contratar? El precio por hora son U$S 250"));
-let servicioAdicional = prompt ("Te gustaria contratas ademas nuestro servicio de mantenimiento y soporte anual, por U$S 50 al mes?");
-
-function calcularpresupuesto () {
-
-    let precioHora = 250;
-    let precioAdicional = 50;
-    
-    //tarifaBasica = horasTrabajadas * precioHora;
-    //tarifaCompleta = horasTrabajadas * precioHora + servicioAdicional;
-    //let precioTrabajo = horasTrabajadas * precioHora;
-    
-    if (servicioAdicional == "Si" || servicioAdicional == "Sí" || servicioAdicional == "si") {
-        //console.log ("El presupuesto por el trabajo solicitado son: U$S " + tarifaBasica);
-        return (precioHora * horasTrabajadas) + precioAdicional; 
-    } else {
-        //console.log ("El presupuesto por el trabajo solicitado son: U$S " + tarifaCompleta);
-        return precioHora * horasTrabajadas; 
+// creo una clase para definir la estructura de los tipos de trabajos que ofrecemos en Developerlandia. Programacion defensiva
+class TrabajosDisponibles {
+    constructor (nombre = "", precioHora = 0) {
+        this.nombre = nombre;
+        this.precioHora = precioHora;
     }
+}
+
+
+//creo un array vacio, defino los diferentes trabajos y despues hago push para sumarlos a la lista
+const trabajosDisponibles = []
+
+const desarrolloFront = new TrabajosDisponibles ("Desarrollo front-end", 250);
+const desarrolloBack = new TrabajosDisponibles ("Desarrollo back-end", 350);
+const desarrolloApps = new TrabajosDisponibles ("Desarrollo aplicaciones moviles", 300);
+
+trabajosDisponibles.push (desarrolloFront);
+trabajosDisponibles.push (desarrolloBack);
+trabajosDisponibles.push (desarrolloApps);
+
+
+//creo la funcion
+function calcularPresupuesto (e) {
+
+    e.preventDefault ();
+
+    let trabajoSeleccionado = document.getElementById("tipoTrabajo").value.trim();
+    let cantidadDesarrolladores = parseInt(document.getElementById ("desarrolladores").value);
+    let horasContratar = parseInt(document.getElementById ("horas").value);
+    let servicioAdicional = document.getElementById ("servicioAdicional").value.trim();
+    let precioAdicional = 0;
+
+    if (servicioAdicional === "Si") {
+        precioAdicional = 100; // Se agregan $100 si selecciona el servicio adicional
+    }
+
+    let trabajo = trabajosDisponibles.find(trabajo => trabajo.nombre === trabajoSeleccionado);
     
-    //console.log ("El presupuesto por el trabajo solicitado son: U$S " + precioTrabajo); 
-    
-    //return precioTrabajo; // Devuelve el precio del trabajo
+    if (trabajo) {
+        let costoTotal = (trabajo.precioHora * cantidadDesarrolladores * horasContratar) + precioAdicional;
+        document.getElementById("result").innerText = `El costo total es U$S ${costoTotal}`;
+        
+    } else {
+        alert("Por favor, selecciona un tipo de trabajo válido.");
+    }
 }
 
-console.log (calcularpresupuesto ());
-
-let presupuestoFinal = calcularpresupuesto(); // Almacenamos el resultado en una variable
-
-if (presupuestoFinal <= 3000) {
-    console.log ("Avanzamos con el trabajo!");
-}
-else if (presupuestoFinal > 3000 && presupuestoFinal <= 4000) {
-    console.log ("Me gustaria juntarme a negociar");
-}
-else {
-    console.warn ("El trabajo esta muy por fuera de tu presupuesto");
-}
-
-//const programadores = ["Pedro", "Joaquin", "Lucas", "Vicente", "Martin"]
-
-//let contacto = prompt ("Te gustaria que te contactemos?")
-
-
-
-
+// Creo un evento, se activa cuando el formulario es enviado.
+document.getElementById("botonEnviar").addEventListener("click", calcularPresupuesto);
 
 
