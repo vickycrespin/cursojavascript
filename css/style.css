@@ -5,35 +5,117 @@
 }
 
 body {
-    background-color: #d1dafa;
+    background-color: #fdf5e6; 
 }
 
-.container {
+.oferta-programacion {
+    background-color: #e51d2e;
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.fomulario-presupuesto {
     background-color: white;
     border-radius: 4px;
-    padding: 20px;
+    padding: 10px;
     align-items: center;
     margin: 20px;
     display: flex;
     width: 700px;
     position: relative;
     margin: auto;
-    top: 100px;
+}
+
+.introduccion {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    color: white;
+}
+
+.introduccion h1 {
+    font-size: 25px;
+    font-weight: 400;
+    font-style: bold;
+    margin-bottom: 10px;
+}
+
+.introduccion p {
+    font-size: 15px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    font-weight: 100;
+}
+
+.tarjetas img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 5px;
+}
+
+.tarjetas {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: white;
+    align-items: center;
+    font-family: "Raleway", sans-serif;
+}
+
+.tarjetas h4 {
+    font-size: 15px;
+}
+
+.tarjetas p {
+    font-size: 15px;
+    margin: 10px;
+    text-align: justify;
+}
+
+.tarjetas a {
+    background-color: #fdf5e6;
+    color: black;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.container {
+    padding: 20px;
+    align-items: center;
+    margin: 20px;
+    display: flex;
+    position: relative;
+    margin: auto;
 }   
 
 .introduccion {
     padding: 10px;
     width: 60%;
+    color: black;
 }
 
-.introduccion h1 {
+.introduccion h2 {
     font-size: 20px;
     font-weight: 400;
     font-style: bold;
     margin-bottom: 10px;
 }  
 
-.introduccion h2 {
+.introduccion h3 {
     font-size: 15px;
     font-weight: 100;
 }
@@ -51,7 +133,7 @@ body {
 }
 
 #botonEnviar {
-    background-color: #6495ed;
+    background-color: #e51d2e;
     color: white;
     font: 10px;
     padding: 5px;
@@ -70,11 +152,53 @@ input {
 }
 
 .data {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 100;
     margin-top: 20px;
-    color: #6495ed;
+    color: red;
 }
+
+.mostrar-presupuesto {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 700px;
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-color: white;
+}
+
+.mostrar-presupuesto p {
+    margin-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+}
+
+#botonDatos {
+    font: 14px;
+    font-weight: 200;
+    padding: 5px;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+#presupuesto-final {
+    color: black;
+    width: 700px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: white;
+    font-style: bold;
+    text-align: center;
+    align-items: center;
+    font-family: "Raleway", sans-serif;   
+}
+
 
 
 

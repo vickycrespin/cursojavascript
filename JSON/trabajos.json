@@ -1,0 +1,22 @@
+[
+    {
+        "tipoTrabajo": "Desarrollo front-end",
+        "precioHora": 250,
+        "active": true
+    },
+    {
+        "tipoTrabajo": "Desarrollo back-end",
+        "precioHora": 350,
+        "active": true
+    },
+    {
+        "tipoTrabajo": "Desarrollo aplicaciones moviles",
+        "precioHora": 300,
+        "active": true
+    },
+    {
+        "tipoTrabajo": "Desarrollo de prototipos de software",
+        "precioHora": 500,
+        "active": false
+    }
+]

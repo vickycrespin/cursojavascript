@@ -8,48 +8,81 @@
 </head>
 <body>
 
-    <div class="container"> 
-
-            <div class="introduccion">
-               <h1> Buscas contratar un servicio de programacion? </h1>
-               <h2> En Developer World tenemos una solucion para vos, responde las preguntas y obtené un presupuesto. </h2>
-                <div class="data">  <!--lo creo para imprimir el resultado de mi calculadora-->
-                    <div class="result" id="result"> </div>
-                </div> 
-            </div>
-            
-            <div class="formulario">
-                <form action="form.php" method="POST"></form>
-
-                    <p> Qué trabajo de Developer World deseas contratar? </p>
-                    <select name="tipoTrabajo" id="tipoTrabajo">
-                        <option value="Desarrollo front-end"> Desarrollo front-end </option>
-                        <option value="Desarrollo back-end"> Desarrollo back-end </option>
-                        <option value="Desarrollo aplicaciones moviles"> Desarrollo aplicaciones moviles </option>
-                    </select>
-            
-                    <p> Cuantos desarrolladores desearias contratar? </p>
-                    <input type="number" name="desarrolladores" id="desarrolladores">
-            
-                    <p> Cuantas horas de trabajo deseas cotizar? </p>
-                    <input type="number" name="horas" id="horas">
-            
-                    <p> Deseas contratar servicio de mantenimiento por U$S100? </p>
-                    <select name="servicioAdicional" id="servicioAdicional">
-                        <option value="Si"> Si </option>
-                        <option value="No"> No </option>
-                    </select>
-            
-                    <input type="button" id="botonEnviar" value="Cotiza Online!"> 
-                </form>    
-
-            </div>
-        </div> 
+   <section class="oferta-programacion"> 
+        <div class="introduccion"> 
+            <h1> Encontrá el proximo Programador de Workana para tu proyecto hoy </h1>
+            <p> Ahorra tiempo, pon en marcha tu proyecto con una propuesta a la medida de tu presupuesto y recibe un trabajo de calidad en el plazo estipulado. Construye la mejor versión de tu negocio con la flexibilidad de los freelancers. Encuentra en Workana profesionales expertos en tecnología, diseño, negocio, contenido, redacción, traducción, contable, financiero y más. </p>
+        </div>
     
-    </div>
+        <div class="contenedor-tarjetas"> 
+            <div class="tarjetas">
+                <img class="trabajo-programacion" src="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=2536&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="imagen front-end">
+                <h4> Desarrollo Front-end </h4>
+                <p> Nos enfocaremos sobre la interfaz de usuario desde el punto de vista del código, para que la interacción con el sistema sea posible. Velaremos por la parte visual de la web haciendo que su diseño sea intuitivo y atractivo. </p>
+                <a href="#cotizar"> Cotizar </a> 
+            </div>
+            <div class="tarjetas">
+                <img class="trabajo-programacion" src="https://images.unsplash.com/photo-1687603917313-ccae1a289a9d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="imagen back-end">
+                <h4> Desarrollo Back-end </h4>
+                <p> Trabajemos en la creación y mantenimiento de la parte del software que funciona en el servidor, es decir, en el desarrollo y gestión de bases de datos, servidores web, APIs y otros elementos que hacen posible el funcionamiento de una aplicación. </p>
+                <a href="#cotizar"> Cotizar</a>    
+            </div>
+            <div class="tarjetas">
+                <img class="trabajo-programacion" src="https://images.unsplash.com/photo-1581287053822-fd7bf4f4bfec?q=80&w=2701&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="desarrollo apps">
+                <h4> Desarrollo Aplicaciones Móviles </h4>
+                <p> Nos encargaremos de gestionar el ciclo de vida de las aplicaciones, desde su concepción hasta su lanzamiento al mercado, de acuerdo con las especificaciones definidas. Trabajamos con: Android, iOS y Windows Phone.  </p>
+                <a href="#cotizar"> Cotizar</a> 
+            </div>
+        </div>
+        
+    </section>
+
+
+    <section class="fomulario-presupuesto" id="cotizar"> 
+        <div class="container"> 
+
+                <div class="introduccion">
+                <h2> Buscas contratar un servicio de programacion? </h2>
+                <h3> En Developer World tenemos una solucion para vos, responde las preguntas y obtené un presupuesto. </h3>
+                    <div class="data">  <!--lo creo para imprimir el resultado de mi calculadora-->
+                        <div class="result" id="result"> </div>
+                    </div> 
+                </div>
+                
+                <div class="formulario">
+                    <form action="form.php" method="POST">
+
+                        <p> Qué trabajo de Developer World deseas contratar? </p>
+                        <select name="tipoTrabajo" id="tipoTrabajo">
+                            <option value="Desarrollo front-end"> Desarrollo front-end </option>
+                            <option value="Desarrollo back-end"> Desarrollo back-end </option>
+                            <option value="Desarrollo aplicaciones moviles"> Desarrollo aplicaciones moviles </option>
+                        </select>
+                
+                        <p> Cuantos desarrolladores desearias contratar? </p>
+                        <input type="number" name="desarrolladores" id="desarrolladores">
+                
+                        <p> Cuantas horas de trabajo deseas cotizar? </p>
+                        <input type="number" name="horas" id="horas">
+                
+                        <p> Deseas contratar servicio de mantenimiento por U$S100? </p>
+                        <select name="servicioAdicional" id="servicioAdicional">
+                            <option value="Si"> Si </option>
+                            <option value="No"> No </option>
+                        </select>
+                
+                        <input type="button" id="botonEnviar" value="Cotiza Online!"> 
+                    </form>    
+
+                </div>
+            </div> 
+        </div>
+    </section>
+
+    <section class="mostrar-presupuesto" style="font-family: Raleway, sans-serif";> </section>
      
-    
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- libreria sweet alert-->
+    <script type="module" src="js/main.js"></script>
 
 </body>
 </html>
